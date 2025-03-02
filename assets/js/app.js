@@ -1,7 +1,16 @@
 const date = new Date();
-const currentDate = date.toDateString();
+const currentDay = date.toLocaleString("en-GB", {
+   weekday: "short",
+});
+const currentDate = date.toLocaleString("en-GB", {
+   month: "short",
+   day: "numeric",
+   year: "numeric",
+});
 
-document.getElementById("display-current-date").innerText = `${currentDate}`;
+document.getElementById(
+   "display-current-date"
+).innerHTML = `${currentDay}, <br> <span class="font-bold"> ${currentDate} </span>`;
 
 const totalCompletedTask = document.getElementById("total-completed-task");
 let totalCompletedTaskCount = parseInt(totalCompletedTask.innerText);
@@ -41,7 +50,13 @@ for (let completedBtn of completedBtns) {
       const currentTime = updateDate.toLocaleTimeString();
 
       const activityLog = document.getElementById("activity-log");
-      const notification = `<div class="p-2.5 bg-[#F4F7FF] rounded-lg text-gray-500 mb-3.5"> <p> You have Complete The Task ${currentTaskTitle} at ${currentTime}</p> </div>`;
+      const notification = `<div class="p-2.5 bg-[#F4F7FF] rounded-lg text-sm text-gray-500 mb-3.5"> <p> You have Complete The Task ${currentTaskTitle} at ${currentTime}</p> </div>`;
       activityLog.insertAdjacentHTML("beforeend", notification);
    });
 }
+
+document
+   .getElementById("clear-history")
+   .addEventListener("click", function (e) {
+      document.getElementById("activity-log").innerHTML = " ";
+   });
