@@ -60,3 +60,7 @@ document
    .addEventListener("click", function (e) {
       document.getElementById("activity-log").innerHTML = " ";
    });
+
+document.getElementById("discoverNew").addEventListener("click", function (e) {
+   document.location.href = "./blogs.html";
+});
