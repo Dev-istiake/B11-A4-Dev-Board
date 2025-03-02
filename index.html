@@ -16,7 +16,7 @@
          rel="stylesheet"
       />
    </head>
-   <body class="font-Poppins bg-[#F4F7FF] min-h-screen">
+   <body id="main-body" class="font-Poppins bg-[#F4F7FF] min-h-screen">
       <header class="container mx-auto pt-5">
          <!-- Nav bar section -->
          <nav
@@ -27,8 +27,9 @@
                <img class="w-14" src="./assets/images/logo.png" alt="" />
                <h1 class="text-4xl">Dev<span class="font-bold">Board</span></h1>
             </div>
-            <!-- Total completed task -->
+
             <div class="flex items-center gap-8">
+               <!-- Total completed task -->
                <div
                   class="flex gap-4 items-center px-5 py-3 bg-[#F4F7FF] rounded-4xl"
                >
@@ -41,7 +42,11 @@
                      23
                   </h3>
                </div>
-               <button class="px-3 py-3 bg-[#F4F7FF] rounded-full">
+               <!-- Change theme -->
+               <button
+                  id="change-theme"
+                  class="px-3 py-3 bg-[#F4F7FF] rounded-full"
+               >
                   <img
                      class="w-10 h-10"
                      src="./assets/images/theme-btn.png"
@@ -76,7 +81,7 @@
                   <!-- Discover new section -->
                   <div
                      id="discoverNew"
-                     class="bg-linear-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] py-6 px-10 flex items-center gap-4 rounded-xl"
+                     class="bg-linear-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] py-6 px-10 flex items-center gap-4 rounded-xl hover:cursor-pointer"
                   >
                      <img
                         class="w-16 border-2 border-dashed border-gray-400"

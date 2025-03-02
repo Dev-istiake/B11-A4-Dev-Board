@@ -4647,9 +4647,6 @@
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }
-  .mt-3\.5 {
-    margin-top: calc(var(--spacing) * 3.5);
-  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
@@ -5528,9 +5525,6 @@
   .loading-xs {
     width: calc(var(--size-selector, 0.25rem) * 4);
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -6082,12 +6076,6 @@
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
-  .gap-2\.5 {
-    gap: calc(var(--spacing) * 2.5);
-  }
-  .gap-3 {
-    gap: calc(var(--spacing) * 3);
-  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
@@ -6567,10 +6555,6 @@
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
   }
-  .border-t-2 {
-    border-top-style: var(--tw-border-style);
-    border-top-width: 2px;
-  }
   .border-r {
     border-right-style: var(--tw-border-style);
     border-right-width: 1px;
@@ -6806,11 +6790,17 @@
   .bg-\(color\:--my-color\) {
     background-color: var(--my-color);
   }
+  .bg-\[\#\$\{randomBgColor\}\] {
+    background-color: #${randomBgColor};
+  }
   .bg-\[\#0088cc\] {
     background-color: #0088cc;
   }
   .bg-\[\#3752FD\] {
     background-color: #3752FD;
+  }
+  .bg-\[\#650590\] {
+    background-color: #650590;
   }
   .bg-\[\#F4F7FF\] {
     background-color: #F4F7FF;
@@ -7106,17 +7096,8 @@
       --size: calc(var(--size-selector, 0.25rem) * 4);
     }
   }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
-  }
   .p-2\.5 {
     padding: calc(var(--spacing) * 2.5);
-  }
-  .p-3 {
-    padding: calc(var(--spacing) * 3);
-  }
-  .p-3\.5 {
-    padding: calc(var(--spacing) * 3.5);
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
@@ -7245,9 +7226,6 @@
   }
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
-  }
-  .pt-3\.5 {
-    padding-top: calc(var(--spacing) * 3.5);
   }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
@@ -7434,9 +7412,6 @@
   .select-xs {
     --size: calc(var(--size-field, 0.25rem) * 6);
     font-size: 0.6875rem;
-  }
-  .text-\[27px\] {
-    font-size: 27px;
   }
   .textarea-lg {
     font-size: 1.125rem;
@@ -7835,9 +7810,6 @@
   }
   .progress-warning {
     color: var(--color-warning);
-  }
-  .text-gray-300 {
-    color: var(--color-gray-300);
   }
   .text-gray-400 {
     color: var(--color-gray-400);
@@ -8922,6 +8894,13 @@
   }
   .transform-view {
     transform-box: view-box;
+  }
+  .hover\:cursor-pointer {
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+      }
+    }
   }
 }
 .font-Poppins {
