@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Dev Board</title>
+
+      <!-- Tailwind CSS module link -->
+      <link rel="stylesheet" href="./src/output.css" />
+
+      <!-- Google fonts including link -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+         rel="stylesheet"
+      />
+   </head>
+   <body class="font-Poppins bg-[#F4F7FF] min-h-screen">
+      <header class="container mx-auto pt-5">
+         <!-- Nav bar section -->
+         <nav
+            class="bg-white flex justify-between items-center px-6 py-4 rounded-2xl"
+         >
+            <!-- Web logo -->
+            <div class="flex gap-2 items-center">
+               <img class="w-14" src="./assets/images/logo.png" alt="" />
+               <h1 class="text-4xl">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <!-- Total completed task -->
+            <div class="flex items-center gap-8">
+               <div
+                  class="flex gap-4 items-center px-5 py-3 bg-[#F4F7FF] rounded-4xl"
+               >
+                  <img
+                     class="w-8 h-8"
+                     src="./assets/images/checkbox.png"
+                     alt=""
+                  />
+                  <h3 id="total-completed-task" class="text-3xl font-bold">
+                     23
+                  </h3>
+               </div>
+               <button class="px-3 py-3 bg-[#F4F7FF] rounded-full">
+                  <img
+                     class="w-10 h-10"
+                     src="./assets/images/theme-btn.png"
+                     alt=""
+                  />
+               </button>
+            </div>
+         </nav>
+      </header>
+      <!-- hero section -->
+      <section>
+         <div
+            class="container w-full mx-auto grid grid-cols-[72%_1fr] gap-6 mt-6"
+         >
+            <div class="bg-white rounded-2xl">
+               <!-- Task sections -->
+               <div
+                  class="p-6 border-dashed border-b-2 border-[#F4F7FF] grid grid-cols-[24%_1fr_24%] gap-6"
+               >
+                  <!-- Available task -->
+                  <div
+                     class="bg-[#F4F7FF] p-6 pr-5 flex items-center gap-5 rounded-xl"
+                  >
+                     <img src="./assets/images/checkbox.png" alt="" />
+                     <div>
+                        <p class="text-sm">Task Assigned</p>
+                        <h3 id="available-task" class="text-3xl font-bold">
+                           05
+                        </h3>
+                     </div>
+                  </div>
+                  <!-- Discover new section -->
+                  <div
+                     class="bg-linear-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] py-6 px-10 flex items-center gap-4 rounded-xl"
+                  >
+                     <img
+                        class="w-16 border-2 border-dashed border-gray-400"
+                        src="./assets/images/board.png"
+                        alt=""
+                     />
+                     <h1 class="text-xl text-white font-medium">
+                        Discover Something <br />
+                        New Today!
+                     </h1>
+                  </div>
+                  <!-- Display current date with calender -->
+                  <div
+                     class="bg-[#F4F7FF] p-6 flex items-center gap-5 rounded-xl"
+                  >
+                     <div class="p-4 bg-white rounded-full">
+                        <img
+                           class="w-7 h-7"
+                           src="./assets/images/calender.png"
+                           alt=""
+                        />
+                     </div>
+                     <h3 class="text-xl">
+                        Wed,<br /><span class="font-bold">July 28 2025</span>
+                     </h3>
+                  </div>
+               </div>
+               <!-- Task summary section -->
+               <div id="task-summary" class="p-6 grid grid-cols-3 gap-9">
+                  <!-- Task 01 -->
+                  <div class="task p-6 bg-[#F4F7FF] rounded-xl flex-col">
+                     <h4
+                        class="text-sm px-4 py-2 bg-white rounded-lg w-max mb-4"
+                     >
+                        ShopEase
+                     </h4>
+                     <h2 class="task-title text-xl font-medium mb-4">
+                        Fix Mobile Button Issue
+                     </h2>
+                     <div class="p-4 bg-white rounded-xl mb-3">
+                        <p
+                           class="text-sm text-gray-400 text-ellipsis overflow-hidden whitespace-nowrap"
+                        >
+                           Debug using Chrome DevTools, <br />check for
+                           overlapping elements, and ensure onClick works
+                           properly and ensure onClick works properly
+                        </p>
+                     </div>
+                     <div
+                        class="flex justify-between items-center pt-3 border-dashed border-t border-gray-200"
+                     >
+                        <div>
+                           <p class="text-xs text-gray-500">Deadline</p>
+                           <h4 class="text-sm font-medium">21 March 2025</h4>
+                        </div>
+                        <button
+                           class="completed-btn btn px-5 py-2.5 bg-[#3752FD] text-sm text-white rounded-lg"
+                        >
+                           Completed
+                        </button>
+                     </div>
+                  </div>
+                  <!-- Task 02 -->
+                  <div class="task p-6 bg-[#F4F7FF] rounded-xl flex-col">
+                     <h4
+                        class="text-sm px-4 py-2 bg-white rounded-lg w-max mb-4"
+                     >
+                        CloudSync
+                     </h4>
+                     <h2 class="task-title text-xl font-medium mb-4">
+                        Add Dark Mode
+                     </h2>
+                     <div class="p-4 bg-white rounded-xl mb-3">
+                        <p
+                           class="text-sm text-gray-400 text-ellipsis overflow-hidden whitespace-nowrap"
+                        >
+                           Store the user's preference in <br />localStorage,
+                           update CSS variables dynamically, and apply a smooth
+                           transition effect.
+                        </p>
+                     </div>
+                     <div
+                        class="flex justify-between items-center pt-3 border-dashed border-t border-gray-200"
+                     >
+                        <div>
+                           <p class="text-xs text-gray-500">Deadline</p>
+                           <h4 class="text-sm font-medium">21 March 2025</h4>
+                        </div>
+                        <button
+                           class="completed-btn btn px-5 py-2.5 bg-[#3752FD] text-sm text-white rounded-lg"
+                        >
+                           Completed
+                        </button>
+                     </div>
+                  </div>
+                  <!-- Task 03 -->
+                  <div class="task p-6 bg-[#F4F7FF] rounded-xl flex-col">
+                     <h4
+                        class="text-sm px-4 py-2 bg-white rounded-lg w-max mb-4"
+                     >
+                        SwiftPay
+                     </h4>
+                     <h2 class="task-title text-xl font-medium mb-4">
+                        Optimize Home page 
+                     </h2>
+                     <div class="p-4 bg-white rounded-xl mb-3">
+                        <p
+                           class="text-sm text-gray-400 text-ellipsis overflow-hidden whitespace-nowrap"
+                        >
+                           Debug using Chrome DevTools, <br />check for
+                           overlapping elements, and ensure onClick works
+                           properly and ensure onClick works properly
+                        </p>
+                     </div>
+                     <div
+                        class="flex justify-between items-center pt-3 border-dashed border-t border-gray-200"
+                     >
+                        <div>
+                           <p class="text-xs text-gray-500">Deadline</p>
+                           <h4 class="text-sm font-medium">21 March 2025</h4>
+                        </div>
+                        <button
+                           class="completed-btn btn px-5 py-2.5 bg-[#3752FD] text-sm text-white rounded-lg"
+                        >
+                           Completed
+                        </button>
+                     </div>
+                  </div>
+                  <!-- Task 04 -->
+                  <div class="task p-6 bg-[#F4F7FF] rounded-xl flex-col">
+                     <h4
+                        class="text-sm px-4 py-2 bg-white rounded-lg w-max mb-4"
+                     >
+                        Meta
+                     </h4>
+                     <h2 class="task-title text-xl font-medium mb-4">
+                        Add new emoji 🤲
+                     </h2>
+                     <div class="p-4 bg-white rounded-xl mb-3">
+                        <p
+                           class="text-sm text-gray-400 text-ellipsis overflow-hidden whitespace-nowrap"
+                        >
+                           Debug using Chrome DevTools, <br />check for
+                           overlapping elements, and ensure onClick works
+                           properly and ensure onClick works properly
+                        </p>
+                     </div>
+                     <div
+                        class="flex justify-between items-center pt-3 border-dashed border-t border-gray-200"
+                     >
+                        <div>
+                           <p class="text-xs text-gray-500">Deadline</p>
+                           <h4 class="text-sm font-medium">21 March 2025</h4>
+                        </div>
+                        <button
+                           class="completed-btn btn px-5 py-2.5 bg-[#3752FD] text-sm text-white rounded-lg"
+                        >
+                           Completed
+                        </button>
+                     </div>
+                  </div>
+                  <!-- Task 05 -->
+                  <div class="task p-6 bg-[#F4F7FF] rounded-xl flex-col">
+                     <h4
+                        class="text-sm px-4 py-2 bg-white rounded-lg w-max mb-4"
+                     >
+                        Google LLC
+                     </h4>
+                     <h2 class="task-title text-xl font-medium mb-4">
+                        Integrate OpenAI API
+                     </h2>
+                     <div class="p-4 bg-white rounded-xl mb-3">
+                        <p
+                           class="text-sm text-gray-400 text-ellipsis overflow-hidden whitespace-nowrap"
+                        >
+                           Debug using Chrome DevTools, <br />check for
+                           overlapping elements, and ensure onClick works
+                           properly and ensure onClick works properly
+                        </p>
+                     </div>
+                     <div
+                        class="flex justify-between items-center pt-3 border-dashed border-t border-gray-200"
+                     >
+                        <div>
+                           <p class="text-xs text-gray-500">Deadline</p>
+                           <h4 class="text-sm font-medium">21 March 2025</h4>
+                        </div>
+                        <button
+                           class="completed-btn btn px-5 py-2.5 bg-[#3752FD] text-sm text-white rounded-lg"
+                        >
+                           Completed
+                        </button>
+                     </div>
+                  </div>
+                  <!-- Task 06 -->
+                  <div class="task p-6 bg-[#F4F7FF] rounded-xl flex-col">
+                     <h4
+                        class="text-sm px-4 py-2 bg-white rounded-lg w-max mb-4"
+                     >
+                        Glassdoar
+                     </h4>
+                     <h2 class="task-title text-xl font-medium mb-4">
+                        Improve Job searching
+                     </h2>
+                     <div class="p-4 bg-white rounded-xl mb-3">
+                        <p
+                           class="text-sm text-gray-400 text-ellipsis overflow-hidden whitespace-nowrap"
+                        >
+                           Debug using Chrome DevTools, <br />check for
+                           overlapping elements, and ensure onClick works
+                           properly and ensure onClick works properly
+                        </p>
+                     </div>
+                     <div
+                        class="flex justify-between items-center pt-3 border-dashed border-t border-gray-200"
+                     >
+                        <div>
+                           <p class="text-xs text-gray-500">Deadline</p>
+                           <h4 class="text-sm font-medium">21 March 2025</h4>
+                        </div>
+                        <button
+                           class="completed-btn btn px-5 py-2.5 bg-[#3752FD] text-sm text-white rounded-lg"
+                        >
+                           Completed
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="bg-white rounded-2xl">
+               <div
+                  class="py-6 pl-8 pr-4 border-dashed border-b-2 border-gray-100 flex flex-col justify-center items-center gap-4"
+               >
+                  <div class="flex items-center gap-2">
+                     <img
+                        class="w-6 h-6"
+                        src="./assets/images/activity.png"
+                        alt=""
+                     />
+                     <h1 class="text-lg font-medium">Activity Log</h1>
+                  </div>
+                  <button
+                     class="btn text-sm text-white rounded-lg bg-[#3752FD]"
+                  >
+                     Clear History
+                  </button>
+               </div>
+               <div class="py-6 pl-8 pr-4">
+                  <div id="activity-log"></div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <script src="/assets/js/app.js"></script>
+   </body>
+</html>
