@@ -1,3 +1,8 @@
+const date = new Date();
+const currentDate = date.toDateString();
+
+document.getElementById("display-current-date").innerText = `${currentDate}`;
+
 const totalCompletedTask = document.getElementById("total-completed-task");
 let totalCompletedTaskCount = parseInt(totalCompletedTask.innerText);
 
@@ -19,9 +24,6 @@ for (let completedBtn of completedBtns) {
       totalTaskLengthCount--;
       availableTask.innerText = `0${totalTaskLengthCount}`;
 
-      console.log(totalTaskLengthCount);
-
-      const currentTask = e.currentTarget.parentElement.parentElement;
       if (totalTaskLengthCount === 0) {
          alert("Board updated successfully");
          alert("Congrats!!! You have completed all the current task");
@@ -32,11 +34,14 @@ for (let completedBtn of completedBtns) {
       totalCompletedTaskCount++;
       totalCompletedTask.innerText = `${totalCompletedTaskCount}`;
 
+      const currentTask = e.currentTarget.parentElement.parentElement;
       const currentTaskTitle =
          currentTask.querySelector(".task-title").innerText;
+      const updateDate = new Date();
+      const currentTime = updateDate.toLocaleTimeString();
 
       const activityLog = document.getElementById("activity-log");
-      const notification = `<div class="p-2.5 bg-[#F4F7FF] rounded-lg text-gray-500 mb-3.5"> <p> You have Complete The Task ${currentTaskTitle} </p> </div>`;
+      const notification = `<div class="p-2.5 bg-[#F4F7FF] rounded-lg text-gray-500 mb-3.5"> <p> You have Complete The Task ${currentTaskTitle} at ${currentTime}</p> </div>`;
       activityLog.insertAdjacentHTML("beforeend", notification);
    });
 }
