@@ -1,3 +1,7 @@
+document.getElementById("discoverNew").addEventListener("click", function () {
+   document.location.href = "./blogs.html";
+});
+
 const date = new Date();
 const currentDay = date.toLocaleString("en-GB", {
    weekday: "short",
@@ -34,10 +38,10 @@ for (let completedBtn of completedBtns) {
       availableTask.innerText = `0${totalTaskLengthCount}`;
 
       if (totalTaskLengthCount === 0) {
-         alert("Board updated successfully");
+         alert("Board updated Successfully");
          alert("Congrats!!! You have completed all the current task");
       } else {
-         alert("Board updated successfully");
+         alert("Board updated Successfully");
       }
 
       totalCompletedTaskCount++;
@@ -50,7 +54,7 @@ for (let completedBtn of completedBtns) {
       const currentTime = updateDate.toLocaleTimeString();
 
       const activityLog = document.getElementById("activity-log");
-      const notification = `<div class="p-2.5 bg-[#F4F7FF] rounded-lg text-sm text-gray-500 mb-3.5"> <p> You have Complete The Task ${currentTaskTitle} at ${currentTime}</p> </div>`;
+      const notification = `<div class="p-2.5 bg-[#F4F7FF] rounded-lg text-sm text-gray-500 mb-3.5 font-medium"> <p> You have Complete The Task ${currentTaskTitle} at ${currentTime}</p> </div>`;
       activityLog.insertAdjacentHTML("beforeend", notification);
    });
 }
@@ -60,7 +64,3 @@ document
    .addEventListener("click", function (e) {
       document.getElementById("activity-log").innerHTML = " ";
    });
-
-document.getElementById("discoverNew").addEventListener("click", function (e) {
-   document.location.href = "./blogs.html";
-});
